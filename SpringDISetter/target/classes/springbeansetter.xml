@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<bean id="employe" class="com.src.dao.Employee">
+		<property name="id" value="01"></property>
+		<property name="name" value="shashi"></property>
+	</bean>
+	<bean id="address" class="com.src.dao.Address">
+		<property name="id" value="01"></property>
+		<property name="name" value="shashikumar"></property>
+		<property name="Employee" ref="employe"></property>
+	</bean>
+
+</beans>
