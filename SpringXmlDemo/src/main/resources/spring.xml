@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- bean definitions here -->
+	<!-- <bean id="phoneBill" class="com.src.dao.PhoneBillImp">
+	</bean>
+	<bean id="lopiBill" class="com.src.dao.LopiBillImp">
+	</bean>
+	<bean id="lopiService" class="com.src.service.LopiServiceImp">
+		<property name="PhoneBill" ref="phoneBill"></property>
+		<property name="LopiBill" ref="lopiBill"></property>
+	</bean> -->
+	<context:annotation-config></context:annotation-config>
+	<context:component-scan base-package="com.src"></context:component-scan>
+</beans>
