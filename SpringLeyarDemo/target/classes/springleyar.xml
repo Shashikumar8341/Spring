@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<bean id="addressDao" class="com.src.dao.AddressDao">
+	</bean>
+	<bean id="addressService" class="com.src.service.AddressService">
+		<constructor-arg ref="addressDao"></constructor-arg>
+	</bean>
+
+	<bean id="addressController"
+		class="com.src.controller.AddressController">
+		<property name="AddressService" ref="addressService"></property>
+	</bean>
+</beans>
